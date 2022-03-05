@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
 	<>
-		{/* <header>
+		<header>
 			<figure>
 				LOGO
 			</figure>
@@ -72,8 +72,8 @@ export default function Header() {
 				</ul>
 
 			</nav>
-		</header> */}
-		<header className="bg-indigo-600">
+		</header>
+		{/* <header className="bg-indigo-600">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
     
 	{
@@ -104,7 +104,7 @@ export default function Header() {
 		)
 	}
   </nav>
-</header>
+</header> */}
 	</>
 	
 
