@@ -2,8 +2,10 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Home from './components/Home/Home';
 import Layout from './components/Layout/Layout';
+import Create from './components/Places/Create'
 
 import UsersState from './context/Users/UsersState';
+import PlacesState from './context/Places/PlacesState'
 
 
 import Register from './components/Auth/Register'
@@ -19,7 +21,7 @@ import Public from './routes/Public';
 function Router() {
   return (
     <>
-    
+        <PlacesState>
         <UsersState>
 
           <BrowserRouter>
@@ -34,7 +36,7 @@ function Router() {
 
                     {/* localhost:3000/registro */}
                     <Route 
-                      path="registro"
+                      path="register"
                       element={
                         <Auth component={Register} />
                       } 
@@ -46,7 +48,14 @@ function Router() {
                       element={
                         <Auth component={Login} />
                       } 
-                    />                
+                    />   
+
+                    <Route
+                      path="create"
+                      element={
+                        <Public component={Create}/>
+                      }
+                    />             
 
                     
 
@@ -59,6 +68,7 @@ function Router() {
           </BrowserRouter>
 
           </UsersState>
+          </PlacesState>
      
     </>
   );
