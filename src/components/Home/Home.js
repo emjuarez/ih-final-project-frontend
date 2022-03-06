@@ -16,7 +16,7 @@ export default function Home() {
 		currentUser,
 		verifyingToken
 	} = ctxUsers
-
+ 
 
 	console.log(ctxUsers)
 
