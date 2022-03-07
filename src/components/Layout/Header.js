@@ -2,6 +2,7 @@
 
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import PlacesContext from '../../context/Places/PlacesContext'
 import UsersContext from '../../context/Users/UsersContext'
 
 
@@ -17,7 +18,7 @@ export default function Header() {
 		logoutUser
 	} = ctxUser
 
-
+		
 
   return (
 	<>
@@ -29,8 +30,14 @@ export default function Header() {
 			<nav>
 				<ul>
 
+
+
+				
+
 					{
+						
 						authStatus ?
+						
 						(
 							<>
 								<li>

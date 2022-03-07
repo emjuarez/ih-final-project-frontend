@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Home from './components/Home/Home';
 import Layout from './components/Layout/Layout';
 import Create from './components/Places/Create'
+import Grid from './components/Places/Grid'
 
 import UsersState from './context/Users/UsersState';
 import PlacesState from './context/Places/PlacesState'
@@ -55,7 +56,15 @@ function Router() {
                       element={
                         <Public component={Create}/>
                       }
-                    />             
+                    />      
+
+                    <Route
+                      path="places"
+                      element={
+                        <Public component = {Grid}/>
+                      }
+
+                    />       
 
                     
 

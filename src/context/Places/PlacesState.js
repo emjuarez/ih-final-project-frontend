@@ -22,9 +22,9 @@ const PlacesState = (props) => {
         getPlaces()
     }
 
-    const getPlaces     = async () => {
+    const getPlaces     = async (cathegory) => {
 
-        const res = await axiosClient.get("/api/places")
+        const res = await axiosClient.get("/api/places" + (cathegory ? "/" + cathegory : ""))
 
         const arrPlaces = res.data.data
 
@@ -34,65 +34,65 @@ const PlacesState = (props) => {
         })
     }
 
-    const getCulture    = async () => {
+    const getPlace    = async () => {
 
-        const res = await axiosClient.get("/api/places/culture")
-
-        const arrPlaces = res.data.data
-
-        dispatch({
-            type: "GET_CULTURE",
-            payload: arrPlaces
-        })
-    }
-
-    const getFood       = async () => {
-
-        const res = await axiosClient.get("/api/places/food")
+        const res = await axiosClient.get("/api/places/place")
 
         const arrPlaces = res.data.data
 
         dispatch({
-            type: "GET_FOOD",
+            type: "GET_PLACE",
             payload: arrPlaces
         })
     }
 
-    const getNight      = async () => {
+    // const getFood       = async () => {
 
-        const res = await axiosClient.get("/api/places/nightlife")
+    //     const res = await axiosClient.get("/api/places/food")
 
-        const arrPlaces = res.data.data
+    //     const arrPlaces = res.data.data
 
-        dispatch({
-            type: "GET_NIGHT",
-            payload: arrPlaces
-        })
-    }
+    //     dispatch({
+    //         type: "GET_FOOD",
+    //         payload: arrPlaces
+    //     })
+    // }
 
-    const getOut        = async () => {
+    // const getNight      = async () => {
 
-        const res = await axiosClient.get("/api/places/outdoors")
+    //     const res = await axiosClient.get("/api/places/nightlife")
 
-        const arrPlaces = res.data.data
+    //     const arrPlaces = res.data.data
 
-        dispatch({
-            type: "GET_OUT",
-            payload: arrPlaces
-        })
-    }
+    //     dispatch({
+    //         type: "GET_NIGHT",
+    //         payload: arrPlaces
+    //     })
+    // }
 
-    const getOther      = async () => {
+    // const getOut        = async () => {
 
-        const res = await axiosClient.get("/api/places/other")
+    //     const res = await axiosClient.get("/api/places/outdoors")
 
-        const arrPlaces = res.data.data
+    //     const arrPlaces = res.data.data
 
-        dispatch({
-            type: "GET_OTHER",
-            payload: arrPlaces
-        })
-    }
+    //     dispatch({
+    //         type: "GET_OUT",
+    //         payload: arrPlaces
+    //     })
+    // }
+
+    // const getOther      = async () => {
+
+    //     const res = await axiosClient.get("/api/places/other")
+
+    //     const arrPlaces = res.data.data
+
+    //     dispatch({
+    //         type: "GET_OTHER",
+    //         payload: arrPlaces
+    //     })
+    // }
 
     return(
         <PlacesContext.Provider
@@ -100,11 +100,12 @@ const PlacesState = (props) => {
                 places: globalState.places,
                 createPlace,
                 getPlaces,
-                getCulture,
-                getFood,
-                getNight,
-                getOut,
-                getOther
+                getPlace,
+                // getCulture,
+                // getFood,
+                // getNight,
+                // getOut,
+                // getOther
             }}>
             {props.children}
         </PlacesContext.Provider>
