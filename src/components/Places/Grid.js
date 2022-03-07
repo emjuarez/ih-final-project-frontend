@@ -15,11 +15,11 @@ export default function Grid(){
 
 	const {
 		
-		authStatus,
+		authStatus
 		
 	} = ctxUser
 
-    useEffect(() =>{getPlaces()}, [])
+    useEffect(() =>{ getPlaces()}, [])
 
     console.log("places", places)
 
@@ -33,7 +33,7 @@ export default function Grid(){
 
         {authStatus &&
 
-        <>
+        
             <select onChange={changecathegory}>
                 <option value="">
                     Select a Category
@@ -55,7 +55,7 @@ export default function Grid(){
                 </option>
                 
             </select>						
-        </>
+        
         }
 
         <div>

@@ -46,6 +46,13 @@ const PlacesState = (props) => {
         })
     }
 
+    const deletePlace = async () => {
+
+        const res = await axiosClient.post("/api/places/delete")
+
+        getPlaces()
+    }
+
     // const getFood       = async () => {
 
     //     const res = await axiosClient.get("/api/places/food")
@@ -101,6 +108,7 @@ const PlacesState = (props) => {
                 createPlace,
                 getPlaces,
                 getPlace,
+                deletePlace,
                 // getCulture,
                 // getFood,
                 // getNight,

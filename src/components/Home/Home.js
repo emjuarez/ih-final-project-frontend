@@ -25,17 +25,13 @@ export default function Home() {
 
   return (
 	<>
-
-		
 		<p>Verificar autenticación</p>
 		<button onClick={() => { verifyingToken() }}>VERIFICAR</button>
-		
 
 		<h1>Tu usuario:</h1>
 		<p>{currentUser.name}</p>
 		<p>{currentUser.lastname}</p>
 		<p>{currentUser.email}</p>
-
 
 	</>
   )

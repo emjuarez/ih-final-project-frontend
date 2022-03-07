@@ -4,6 +4,8 @@ import Home from './components/Home/Home';
 import Layout from './components/Layout/Layout';
 import Create from './components/Places/Create'
 import Grid from './components/Places/Grid'
+import Details from './components/Places/Details'
+import Edit from './components/Places/Edit'
 
 import UsersState from './context/Users/UsersState';
 import PlacesState from './context/Places/PlacesState'
@@ -66,6 +68,21 @@ function Router() {
 
                     />       
 
+                    <Route
+                      path="details"
+                      element={
+                        <Public component = {Details}/>
+                      }
+
+                    />  
+                                     
+                    <Route
+                      path="edit"
+                      element={
+                        <Public component = {Edit}/>
+                      }
+
+                    />  
                     
 
 

@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import PlacesContext from './../../context/Places/PlacesContext'
+import UsersContext from '../../context/Users/UsersContext'
 
 export default function Details(){
     
@@ -12,6 +13,13 @@ export default function Details(){
 
     const ctxUser = useContext(UsersContext) 
 
-    return()
+    const {
+		currentUser,
+		authStatus,
+		logoutUser
+	} = ctxUser
+
+
+    return(<h1>detalles</h1>)
     
 }
