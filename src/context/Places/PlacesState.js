@@ -34,16 +34,22 @@ const PlacesState = (props) => {
         })
     }
 
-    const getPlace    = async () => {
+    const getPlace    = async (id) => {
 
-        const res = await axiosClient.get("/api/places/place")
+        
 
-        const arrPlaces = res.data.data
+        const res = await axiosClient.get("/api/places/place" + (id ? "/" + id: ""))
+
+        const singlePlace = res.data.data
+
+        
 
         dispatch({
             type: "GET_PLACE",
-            payload: arrPlaces
+            payload: singlePlace
         })
+
+        console.log(singlePlace)
     }
 
     const deletePlace = async () => {

@@ -39,8 +39,9 @@ export default function Create(){
             cathegory: "",
             location:""
         })
+
+        
     }
- 
     return(
         <>
             <form onSubmit={ (e) => { handleSubmit(e) } }>

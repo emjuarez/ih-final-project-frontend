@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react'
 import PlacesContext from '../../context/Places/PlacesContext'
 import UsersContext from '../../context/Users/UsersContext'
+import { Link } from 'react-router-dom'
 
 export default function Grid(){
 
@@ -8,7 +9,8 @@ export default function Grid(){
 
     const {
         places,
-        getPlaces
+        getPlaces,
+        getPlace
     } = ctxPlaces
 
     const ctxUser = useContext(UsersContext)
@@ -59,8 +61,22 @@ export default function Grid(){
         }
 
         <div>
-            {places.map((place) => <p>{place.name}</p>)}
+            {places.map((place) => { 
+                return (
+                    <div key={place._id}>
+                        <h3>
+                        <Link to={`/places/place/${place._id}`}>
+                            {place.name}
+                        </Link>
+                        </h3>
+                    </div>
+                    
+                    )
+                    })}
+                    
         </div>
+
+       
 
      
         </>
