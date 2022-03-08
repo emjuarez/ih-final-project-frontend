@@ -77,7 +77,7 @@ function Router() {
                     />  
                                      
                     <Route
-                      path="edit"
+                      path="/places/place/:placeId/edit"
                       element={
                         <Public component = {Edit}/>
                       }

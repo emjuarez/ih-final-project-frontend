@@ -25,6 +25,10 @@ export default function Home() {
 
   return (
 	<>
+		<h1 className="text-3xl font-bold underline">
+      		Aplicación
+    	</h1>
+		
 		<p>Verificar autenticación</p>
 		<button onClick={() => { verifyingToken() }}>VERIFICAR</button>
 
