@@ -71,7 +71,7 @@ export default function Details(props){
 
       <div class="mt-6 text-center">
           <div class="mt-6 text-center">
-            <a href="#" class="group inline-flex text-base font-medium">
+            <a href="" class="group inline-flex text-base font-medium">
               
               
               <span class="text-gray-500 hover:text-gray-700">{foundPlace.cathegory}</span>
