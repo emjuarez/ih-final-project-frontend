@@ -130,7 +130,7 @@ export default function Details(props){
           </div> */}
          
           <div class="mt-10">
-            <button type="submit" class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to bag</button>
+            <button type="submit" class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Edit</button>
           </div>
          
         </form>
@@ -138,19 +138,25 @@ export default function Details(props){
     </div>
     
   </div>
+  {authStatus &&
+            
+            <Link to={`/place/${foundPlace._id}/edit`}>Edit</Link>
+        
+        }
+
 </div>
+
+
+{/* <center>
+  <iframe src={foundPlace.location} width="800" height="600" ></iframe>
+</center> */}
 
                 </>
             )}
 
-            {authStatus &&
             
-                <Link to="/places/place/${place._id}/edit">Edit</Link>
             
-            }
-
-            
-           
+        
         </div>
 
       

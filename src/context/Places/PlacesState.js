@@ -52,11 +52,21 @@ const PlacesState = (props) => {
         console.log(singlePlace)
     }
 
-    const deletePlace = async () => {
+    const deletePlace = async (id) => {
 
-        const res = await axiosClient.post("/api/places/delete")
+        const res = await axiosClient.post(`/api/places/delete/${id}`)
 
         getPlaces()
+    }
+
+    const editPlace = async (place) => {
+
+        const res = await axiosClient.post(`/api/places/place/edit/${place._id}`, place)
+        dispatch({
+            type: "EDIT_PLACE",
+            payload: place
+        })
+
     }
 
     // const getFood       = async () => {
@@ -115,6 +125,7 @@ const PlacesState = (props) => {
                 getPlaces,
                 getPlace,
                 deletePlace,
+                editPlace,
                 // getCulture,
                 // getFood,
                 // getNight,

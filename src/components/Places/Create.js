@@ -1,7 +1,9 @@
 import { useState, useContext, useEffect } from 'react'
 import PlacesContext from '../../context/Places/PlacesContext'
+import { useNavigate } from 'react-router-dom'
 
-export default function Create(){
+export default function Create(props){
+    const navigate = useNavigate()
 
     const ctxPlaces = useContext(PlacesContext)
 
@@ -30,6 +32,8 @@ export default function Create(){
     const handleSubmit = (event) => {
         event.preventDefault()
 
+        console.log(place)
+
         createPlace(place)
 
         setPlace({
@@ -40,11 +44,12 @@ export default function Create(){
             location:""
         })
 
+        navigate('/places')
         
     }
     return(
         <>
-            <form onSubmit={ (e) => { handleSubmit(e) } }>
+            {/* <form onSubmit={ (e) => { handleSubmit(e) } }>
                 <label>Name</label>
                 <input
                     name="name"
@@ -82,15 +87,15 @@ export default function Create(){
                 />
 
                 <button>Create Place</button>
-            </form>
+            </form> */}
 
   
-<form onSubmit={ (e) => { handleSubmit(e) } } className="space-y-8 divide-y divide-gray-200">
+<form style={{marginTop: 80}} onSubmit={ (e) => { handleSubmit(e) } } className="space-y-8 divide-y divide-gray-200 max-w-3xl mx-auto">
   <div className="space-y-8 divide-y divide-gray-200">
     <div>
       <div>
         <h3 className="text-lg leading-6 font-medium text-gray-900">Create a new place</h3>
-        <p className="mt-1 text-sm text-gray-500">This information will be displayed publicly so be careful what you share.</p>
+        <p className="mt-1 text-sm text-gray-500">  Create a new place so other peoople can know it!</p>
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
@@ -128,43 +133,63 @@ export default function Create(){
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div className="sm:col-span-3">
-          <label for="country" class="block text-sm font-medium text-gray-700"> Category </label>
-          <div class="mt-1">
-            <select id="country" name="country" autocomplete="country-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-              <option>United States</option>
-              <option>Canada</option>
-              <option>Mexico</option>
+        <div className="sm:col-span-3">
+          <label for="photos" className="block text-sm font-medium text-gray-700"> Image </label>
+          <div className="mt-1">
+            <input type="text" name="photos" id="photos" value={place.photos} onChange={(e) => { handleChange(e) }} autocomplete="given-name" className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"/>
+          </div>
+        </div>
+
+        {/* <div className="sm:col-span-3">
+          <label for="cathegory" className="block text-sm font-medium text-gray-700"> Category </label>
+          <div className="mt-1">
+            <input type="text" name="cathegory" id="cathegory" value={place.cathegory} onChange={(e) => { handleChange(e) }} autocomplete="given-name" className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"/>
+          </div>
+        </div> */}
+
+      
+        
+          <div className="sm:col-span-3">
+          <label for="cathegory" class="block text-sm font-medium text-gray-700"> Category </label>
+          <div className="mt-1">
+            <select id="cathegory" name="cathegory" onChange={handleChange}  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+              <option value="culture">culture</option>
+              <option value="outdoors">outdoors</option>
+              <option value="night_life">night life</option>
+              <option value="food">food</option>
+              <option value="other">other</option>
             </select>
           </div>
         </div>
 
-    <div className="pt-8">
+        </div>
+
+       
+
+        <div className="pt-8">
       <div>
         <h3 className="text-lg leading-6 font-medium text-gray-900">Place location.</h3>
         <p className="mt-1 text-sm text-gray-500">Add the url of google maps.</p>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
         <div className="sm:col-span-3">
-          <label for="first-name" className="block text-sm font-medium text-gray-700"> URL </label>
+          <label for="location" className="block text-sm font-medium text-gray-700"> URL </label>
           <div className="mt-1">
-            <input type="text" name="first-name" id="first-name" autocomplete="given-name" className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"/>
+            <input type="text" name="location" id="location" value={place.location} onChange={(e) => { handleChange(e) }} autocomplete="given-name" className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"/>
           </div>
         </div>
-
-        
-        <div class="sm:col-span-6">
-          <label for="street-address" class="block text-sm font-medium text-gray-700"> Street address </label>
-          <div class="mt-1">
-            <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"/>
-          </div>
-        </div>
-
         
       </div>
+     </div>
+
+    </div>
+
+  
+
+    
+    <div className="flex justify-center">
+      <button type="submit" className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">create</button>
     </div>
   </div>
 </form>

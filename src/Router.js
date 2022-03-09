@@ -69,7 +69,7 @@ function Router() {
                     />       
 
                     <Route
-                      path="/places/place/:placeId" //"places/:placeId"
+                      path="/place/:placeId" //"places/:placeId"
                       element={
                         <Public component = {Details}/>
                       }
@@ -77,7 +77,7 @@ function Router() {
                     />  
                                      
                     <Route
-                      path="/places/place/:placeId/edit"
+                      path="/place/:placeId/edit"
                       element={
                         <Public component = {Edit}/>
                       }
