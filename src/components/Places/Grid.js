@@ -31,7 +31,7 @@ export default function Grid(){
 
     return (
         <>
-        
+        <di>
         <h1 className="text-4xl font-extrabold tracking-tight text-black lg:text-6xl">Places</h1>
 
         {authStatus &&
@@ -60,6 +60,8 @@ export default function Grid(){
             </select>						
         
         }
+
+        </di>
            
         <div  style={{marginTop: 50, marginBottom: 90}} className=  "w-full">
         <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">

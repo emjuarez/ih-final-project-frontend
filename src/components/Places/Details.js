@@ -71,11 +71,11 @@ export default function Details(props){
 
                   <div className="mt-6 text-center">
                       <div className="mt-6 text-center">
-                        <a href="" className="group inline-flex text-base font-medium">
+                        <p href="" className="group inline-flex text-base font-medium">
                           
                           
                           <span className="text-gray-500 hover:text-gray-700"> Category: {foundPlace.cathegory}</span>
-                        </a>
+                        </p>
                       </div>
                   </div>
 
