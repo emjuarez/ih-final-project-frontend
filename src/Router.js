@@ -37,7 +37,6 @@ function Router() {
                       />} 
                     />
 
-                    {/* localhost:3000/registro */}
                     <Route 
                       path="register"
                       element={
@@ -45,7 +44,7 @@ function Router() {
                       } 
                     />
 
-                    {/* localhost:3000/login */}
+                
                     <Route 
                       path="login"
                       element={
@@ -69,7 +68,7 @@ function Router() {
                     />       
 
                     <Route
-                      path="/place/:placeId" //"places/:placeId"
+                      path="/place/:placeId" 
                       element={
                         <Public component = {Details}/>
                       }
@@ -84,10 +83,6 @@ function Router() {
 
                     />  
                     
-
-
-
-
                 </Route>
 
               </Routes>

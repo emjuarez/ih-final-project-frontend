@@ -69,54 +69,6 @@ const PlacesState = (props) => {
 
     }
 
-    // const getFood       = async () => {
-
-    //     const res = await axiosClient.get("/api/places/food")
-
-    //     const arrPlaces = res.data.data
-
-    //     dispatch({
-    //         type: "GET_FOOD",
-    //         payload: arrPlaces
-    //     })
-    // }
-
-    // const getNight      = async () => {
-
-    //     const res = await axiosClient.get("/api/places/nightlife")
-
-    //     const arrPlaces = res.data.data
-
-    //     dispatch({
-    //         type: "GET_NIGHT",
-    //         payload: arrPlaces
-    //     })
-    // }
-
-    // const getOut        = async () => {
-
-    //     const res = await axiosClient.get("/api/places/outdoors")
-
-    //     const arrPlaces = res.data.data
-
-    //     dispatch({
-    //         type: "GET_OUT",
-    //         payload: arrPlaces
-    //     })
-    // }
-
-    // const getOther      = async () => {
-
-    //     const res = await axiosClient.get("/api/places/other")
-
-    //     const arrPlaces = res.data.data
-
-    //     dispatch({
-    //         type: "GET_OTHER",
-    //         payload: arrPlaces
-    //     })
-    // }
-
     return(
         <PlacesContext.Provider
             value={{
@@ -126,11 +78,6 @@ const PlacesState = (props) => {
                 getPlace,
                 deletePlace,
                 editPlace,
-                // getCulture,
-                // getFood,
-                // getNight,
-                // getOut,
-                // getOther
             }}>
             {props.children}
         </PlacesContext.Provider>

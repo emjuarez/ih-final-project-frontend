@@ -37,28 +37,6 @@ export default function Login() {
 
   return (
 	  <>
-      {/* <form onSubmit={(evt) => { handleSubmit(evt) }}>
-        <label>Email</label>
-        <input 
-          name="email"
-          value={data.email}
-          onChange={(evt) => { handleChange(evt) }}
-        />
-
-        <label>Password</label>
-        <input 
-        name="password"
-        value={data.password}
-        onChange={(evt) => { handleChange(evt) }}
-        type="password"
-        />
-
-        <button type="submit">Iniciar sesión</button>
-
-      </form> */}
-
-
-  
         <div className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-md">
             <img className="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow"/>
@@ -92,8 +70,6 @@ export default function Login() {
             </div>
           </div>
         </div>
-
-
     </>
   )
 }

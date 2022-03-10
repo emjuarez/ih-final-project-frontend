@@ -21,62 +21,7 @@ export default function Header() {
 
   return (
 	<>
-		{/* <header>
-			<figure>
-				LOGO
-			</figure>
-				
-			<nav>
-				<ul>
-	
-					{
-						
-						authStatus ?
-						
-						(
-							<>
-								<li>
-									<Link
-										to="/"
-										onClick={() => {logoutUser()}}
-									>
-										Cerrar sesión		
-									</Link>
-								</li>
-								<li>{currentUser.name}</li>
-							</>
-							
-						) :
-						(
-							<>
-								<li>
-									<Link
-										to="/register"
-									>
-									Crear cuenta
-									</Link>
-								</li>
-								<li>
-									<Link
-										to="/login"
-									>
-									Iniciar sesión
-									</Link>
-								</li>
-							</>
-						)
-
-					}
-
-					
-					
-
-				</ul>
-
-			</nav>
-		</header> */}
-
-		
+			
 		<header className="bg-indigo-600">
 		<nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
 			<div className="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
@@ -106,17 +51,13 @@ export default function Header() {
 					)
 				}
 			
-
-
 			</div>
 			
 		</nav>
 		</header>
 
-
 	</>
 	
-
   )
 }
 

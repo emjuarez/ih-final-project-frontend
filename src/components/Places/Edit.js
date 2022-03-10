@@ -11,7 +11,6 @@ export default function Edit(){
 
     const {
         places,
-        getPlace,
         editPlace,
         deletePlace
     
@@ -27,24 +26,18 @@ export default function Edit(){
 
     const [place, setPlace] = useState(foundPlace)
 
-     console.log(editPlace)
-     
-
-    // console.log(foundPlace)
-
     const handleChange = (event) => {
 
         setPlace({
             ...place,
             [event.target.name]: event.target.value
         })
-        console.log(place)
+        
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        // createPlace(place)
 
         editPlace(place)
         
@@ -54,56 +47,7 @@ export default function Edit(){
 
     return(
         <>
-          {/* <form onSubmit={ (e) => { handleSubmit(e) } }>
-                <label>Name</label>
-                <input
-                    name="name"
-                    type="text"
-                    value={place.name}
-                    onChange={(e) => { handleChange(e) }}
-                />
-                <label>Descripion</label>
-                <input
-                     name="description"
-                    type="textarea"
-                    value={place.description}
-                    onChange={(e) => { handleChange(e) }}
-                />
-                <label>Category</label>
-                <input
-                    name="cathegory"
-                    type="text"
-                    value={place.cathegory}
-                    onChange={(e) => { handleChange(e) }}
-                />
-                <label>Photos</label>
-                <input
-                    name="photos"
-                    type="text"
-                    value={place.photos}
-                    onChange={(e) => { handleChange(e) }}
-                />
-                <label>Location</label>
-                <input
-                    name="location"
-                    type="text"
-                    value={place.location}
-                    onChange={(e) => { handleChange(e) }}
-                />
-
-                <button>Create Place</button>
-            </form> 
-
-            <button onClick={()=> {
-                
-                deletePlace(foundPlace._id)
-
-                navigate("/places")
-                
-                }}>Delete this place</button> */}
-
-
-                  
+                            
             <form style={{marginTop: 50, marginBottom: 90}} onSubmit={ (e) => { handleSubmit(e) } } className="space-y-8 divide-y divide-gray-200 max-w-3xl mx-auto">
             <div className="space-y-8 divide-y divide-gray-200">
                 <div>

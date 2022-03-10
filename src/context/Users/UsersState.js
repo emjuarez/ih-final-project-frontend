@@ -37,7 +37,6 @@ const UsersState = (props) => {
 
 	const verifyingToken = async () => {
 
-		// 1. VERIFICACIÓN DE TOKEN
 
 		const token = localStorage.getItem("token")
 
@@ -45,10 +44,9 @@ const UsersState = (props) => {
 			return delete axiosClient.defaults.headers.common["x-auth-token"]
 		}
 
-		// ADJUNTO EL TOKEN A LA SIGUIENTE PETICIÓN DE AXIOS
 		axiosClient.defaults.headers.common["x-auth-token"] = token
 
-		// 2. REALIZAR PETICIÓN AXIOS
+	
 		const res = await axiosClient.get("/api/users/verifytoken")
 		
 		const userData = res.data.data
