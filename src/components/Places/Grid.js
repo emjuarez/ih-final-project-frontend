@@ -33,46 +33,46 @@ export default function Grid(){
     return (
         <>
         <di>
-        <h1 className="text-4xl font-extrabold tracking-tight text-black lg:text-6xl">Places</h1>
+            <div  className="relative max-w-9xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-10 lg:px-0">
+                <h1 style={{ marginBottom: 10}} className="text-4xl font-extrabold tracking-tight text-black lg:text-6xl">Places</h1>
 
-        {authStatus &&
+                {authStatus &&
             
-            
-        
-            <select onChange={changecathegory} className="inline-flex justify-center w-55px rounded-md border border-gray-300 shadow-sm py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-button" aria-expanded="true">
-                <option value="">
-                    All
-                </option>
-                <option value="food">
-                    food
-                </option>
-                <option value="culture">
-                    culture
-                </option>
-                <option value="night_life">
-                    night life
-                </option>
-                <option value="outdoors">
-                    outdoors
-                </option>
-                <option value="other">
-                    other
-                </option>
-                
-            </select>	
-				
-            
+                <select onChange={changecathegory} className="inline-flex justify-center w-55px rounded-md border border-gray-300 shadow-sm py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-button" aria-expanded="true">
+                    <option value="">
+                        All
+                    </option>
+                    <option value="food">
+                        food
+                    </option>
+                    <option value="culture">
+                        culture
+                    </option>
+                    <option value="night_life">
+                        night life
+                    </option>
+                    <option value="outdoors">
+                        outdoors
+                    </option>
+                    <option value="other">
+                        other
+                    </option>
+                    
+                </select>	
         }
-
         {authStatus &&
         
-            <button onClick={()=> {  navigate("/create")}}  className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Create</button>
-            
-        }
+        <button style={{ marginTop: 10}} onClick={()=> {  navigate("/create")}}  className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Create</button>
+        
+    }
+            </div>
+       
+
+       
 
         </di>
            
-        <div  style={{marginTop: 50, marginBottom: 90}} className=  "w-full">
+        <div  style={{marginTop: 20, marginBottom: 90}} className=  "w-full">
         <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
 
             {places.map((place) => { 
