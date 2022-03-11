@@ -28,7 +28,7 @@ export default function Header() {
 			<div className="flex items-center">
 				<a href="/">
 				<span className="sr-only">Workflow</span>
-				<img className="h-10 w-auto" src="/images/logospot.png" alt=""/>
+				<img className="h-12 w-auto" src="/images/logospot.png" alt=""/>
 				</a>
 			</div>
 				{
