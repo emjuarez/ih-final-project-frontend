@@ -99,7 +99,7 @@ export default function Details(props){
                     
                       {authStatus &&
                       <div style={{marginLeft: 60}} className="mt-10">
-                        <Link to={`/place/${foundPlace._id}/edit`} class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Edit</Link>
+                        <Link to={`/place/${foundPlace._id}/edit`} class="w-full bg-green-700 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Edit</Link>
                       </div>
                       }
                     
