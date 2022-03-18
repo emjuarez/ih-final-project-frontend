@@ -1,3 +1,16 @@
+# Spotview
+
+## Web application for share and discover unique places around you
+### *Frontend Repo*
+
+**Technologies used:** ReactJS, Javascript, TailwindUI , Mongodb, ExpessJS, NodeJS, CSS, HTML.
+
+This project is meant to reconnect with yourself and with the outside world by exploring new places.
+
+## Credits
+
+Send me an email! [emanueljuarez.webdev@gmail.com](mailto:emanueljuarez.webdev@gmail.com) 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
