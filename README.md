@@ -3,7 +3,7 @@
 ## Web application for share and discover unique places around you
 ### *Frontend Repo*
 
-**Technologies used:** ReactJS, Javascript, TailwindUI , Mongodb, ExpessJS, NodeJS, CSS, HTML.
+**Technologies used:** ReactJS, Javascript, TailwindUI, CSS, HTML.
 
 This project is meant to reconnect with yourself and with the outside world by exploring new places.
 
