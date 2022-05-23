@@ -37,7 +37,7 @@ export default function Header() {
 						<>
 							<div className="ml-10 space-x-4">
 								<a href="/" onClick={() => {logoutUser()}} className="inline-block bg-green-700 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Logout</a>
-								<a href="" className="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-black-600 hover:bg-indigo-50">{currentUser.name}</a>
+								<a href="/" className="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-black-600 hover:bg-indigo-50">{currentUser.name}</a>
 							</div>
 						</>
 					):
